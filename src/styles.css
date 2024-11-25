@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+/* Styles globaux */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Suppression du centrage global */
+body {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    position: fixed;
+}
+
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}

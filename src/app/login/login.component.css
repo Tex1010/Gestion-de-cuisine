@@ -1,0 +1,209 @@
+.container {
+  position: fixed; /* Position fixe pour rester à l'écran lors du défilement */
+  width: 90%; /* Utilise 90% de la largeur de l'écran */
+  max-width: 400px;
+  height: auto;
+  min-height: 500px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  box-shadow: 1px 10px 15px rgb(0, 102, 255);
+}
+
+.welcome, .login-form {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.8s ease;
+}
+
+
+.welcome {
+  transform: translateX(0) rotate(0deg);
+  opacity: 1;
+  background: linear-gradient(135deg, var(#6a11cb), var(#2575fc));
+}
+
+.login-form {
+  transform: translateX(100%) rotate(10deg);
+  opacity: 0;
+  background: white;
+}
+
+.container.active .welcome {
+  transform: translateX(-100%) rotate(-10deg);
+  opacity: 0;
+}
+
+.container.active .login-form {
+  transform: translateX(0) rotate(0deg);
+  opacity: 1;
+}
+
+h2 {
+  color: black;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 2);
+  transition: 1s;
+}
+
+p {
+  color: var(--text-color);
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-family: cursive;
+}
+
+.btn {
+  padding: 12px 24px;
+  background: rgb(0, 102, 255);
+  color: white; /* Correction pour afficher le texte en blanc */
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+  background: blue;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.input-group {
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 13px;
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+  background: transparent;
+  transition: border-color 0.3s ease;
+}
+
+.input-group label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 10px;
+  color: black;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: rgb(23, 241, 23);
+  font-size: 12px;
+}
+
+.input-group input:focus {
+  border-bottom-color: var(--accent-color);
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.checkbox-group input {
+  margin-right: 10px;
+}
+
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: transparent;
+  border: none;
+  color: var(--text-color);
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.back-btn:hover {
+  transform: translateX(-5px);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+.floating-icon {
+  position: absolute;
+  font-size: 100px;
+  color: rgba(255, 255, 255, 0.1);
+  user-select: none;
+  pointer-events: none;
+  animation: float 6s ease-in-out infinite;
+}
+
+.icon-1 { top: 10%; left: 10%; animation-delay: 0s;user-select: none;
+  pointer-events: none; }
+.icon-2 { top: 60%; right: 10%; animation-delay: 2s;user-select: none;
+  pointer-events: none; }
+.icon-3 { top: 10%; right: 5%; animation-delay: 2s;user-select: none;
+  background-image: url(../img/Logo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  pointer-events: none; 
+  height: 1.5cm;
+  width: 2cm;
+}
+.icon-3:hover{
+  box-shadow: (1px 10px 15px rgb(0, 102, 255));
+}
+/* Médias queries pour le responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 2rem; /* Réduire la taille des titres */
+  }
+
+  .btn {
+    font-size: 14px; /* Ajuster la taille des boutons */
+    padding: 10px 20px;
+  }
+
+  .input-group input {
+    font-size: 12px;
+  }
+
+  .checkbox-group {
+    font-size: 9px;
+  }
+}
+

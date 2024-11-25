@@ -1,0 +1,477 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .body{
+    height: 100%;
+    width: 100%;
+    position: fixed;  
+  }
+  header{
+    height: 1.5cm;
+    width: 100%;
+    background-color: rgb(82, 39, 235); 
+    padding: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .soratra {
+    font-weight: bolder;
+    color: white;
+    font-size: 37px;
+    position: absolute;
+    margin-left: 1.5cm;
+    font-family: cursive;
+    margin-top: 0.3cm;
+    animation: logoBounceX 2s infinite ease-in-out;
+  }
+  
+  @keyframes logoBounceX {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(15px); 
+    }
+  }
+  
+  .a1,.a2,.a3,.a4{
+    margin-top: 0.6cm;
+    position: absolute;
+    text-decoration: none;
+    transition: 0.4s;
+    color: white;
+    background: transparent;
+    width: 4cm;
+    height: 0.65cm;
+    text-align: center;
+    padding-top: 0.17cm;    
+    font-size: 13px;
+    font-family: cursive;
+    cursor: pointer;
+    border: none;
+    font-weight: bolder;
+  }
+  /* ---------------------------------------------------------------------------------------- */
+  /* Hover Animation améliorée avec rotation et ombre */
+  .a1:hover, .a2:hover, .a3:hover, .a4:hover {
+    transform: translateY(-4px) rotate(-2deg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Style pour la classe active (après clic) */
+  .a1.active, .a2.active, .a3.active, .a4.active {
+    transform: translateY(-4px) rotate(-2deg);
+    color: rgb(18, 202, 18);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Animation de la ligne sous les boutons */
+  .a1.active::after, .a2.active::after, .a3.active::after, .a4.active::after {
+    width: 100%;
+  }
+  
+  .a1::after, .a2::after, .a3::after, .a4::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: rgb(18, 202, 18);
+    bottom: 0;
+    left: 0;
+    transition: width 0.4s ease;
+  }
+  
+  .a1:hover::after, .a2:hover::after, .a3:hover::after, .a4:hover::after {
+    width: 100%;
+  }
+  
+  /* -------------------------------------------------------------------------------------- */
+  .a1{
+      margin-left: 8cm;
+      background-image: url(../img/home.png);
+      background-position: left;
+      background-repeat: no-repeat;
+      background-size: contain;
+  }
+  .a2{
+      margin-left: 14cm;
+      background-image: url(../img/Matétiel\ .png);
+      background-position: left;
+      background-repeat: no-repeat;
+      background-size: contain;
+  }
+  .a3{
+      margin-left: 20cm;
+      background-image: url(../img/Course.png);
+      background-position: left;
+      background-repeat: no-repeat;
+      background-size: contain;
+  }
+  .a4{
+    margin-left: 26cm;
+    background-image: url(../img/Exit.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  .a4:hover{
+    color: red;
+  }
+  
+  /* -------------------------------------------------------------------------------------------- */
+  
+  .date{
+    height: 0.7cm;
+    margin-left: 32cm;
+    margin-top: 0.6cm;
+    background:none;
+    color: white;
+    border: none;
+    font-family: cursive;
+    cursor: none;
+    font-weight: bolder;
+    text-align: center;
+    width: 3cm;
+    user-select: none;
+    pointer-events: none;
+  }
+  /* -------------------------------------------------------------------------------------------- */
+  
+  p{
+    font-family: cursive;
+    color: black;
+    text-align: center;
+    font-size: 10px;
+  }
+  
+  /* -------------------------------------------------------------------------------------------- */
+  .logo{
+    background-image: url(../img/Logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 1cm;
+    width: 2cm;
+    margin-top: 0.3cm;
+    position: absolute;
+    background-color: white;
+  }
+  
+  /* -------------------------------------------------------------------------------------------- */
+  
+  .sisiny{
+    position: absolute;
+    height: 100%;
+    width: 12cm;
+    background: none;
+    border-radius: 5px;
+    margin-top: 1.6cm;
+    background-color: rgba(0, 0, 0, 0.041);
+  }
+  
+  .vatany{
+    background: none;
+    position: absolute;
+    margin-top: 1.6cm;
+    margin-left: 12.5cm;
+    height: 100%;
+    width: 23cm;
+    background-color: rgba(0, 0, 0, 0.041);
+  }
+  /* -------------------------------------------------------------------------------------------- */
+  
+  h2{
+    font-weight: bolder;
+    font-size: 15px;
+    text-align: center;
+    font-family: cursive;
+  }
+  /* -------------------------------------------------------------------------------------------- */
+  
+  .matajout{
+    background-color: #0057b3;
+    height: 0.7cm;
+    cursor: pointer;
+    color: white;
+    width: 2cm;
+    margin-left: 10px;
+    transition: 0.3s;
+    border-style: none;
+    position: absolute;
+    font-size: 12px;
+  }
+  .matajout:hover{
+    background-color: blue;
+  }
+  .matmod1{
+    background-color: #0057b3;
+    height: 0.7cm;
+    cursor: pointer;
+    color: white;
+    width: 2cm;
+    margin-left: 10px;
+    transition: 0.3s;
+    border-style: none;
+    position: absolute;
+    font-size: 12px;
+  }
+  .matmod1:hover{
+    background-color: blue;
+  }
+  
+  .matmod2{
+    background-color: #0057b3;
+    height: 0.7cm;
+    cursor: pointer;
+    color: white;
+    width: 2cm;
+    margin-left: 2.35cm;
+    transition: 0.3s;
+    border-style: none;
+    position: absolute;
+    font-size: 12px;
+  }
+  .matmod2:hover{
+    background-color: blue;
+  }
+  
+  .matmod3{
+    background-color: #0057b3;
+    height: 0.7cm;
+    cursor: pointer;
+    color: white;
+    width: 6cm;
+    margin-left: 15cm;
+    transition: 0.3s;
+    border-style: none;
+    position: absolute;
+    font-size: 12px;
+  }
+  .matmod3:hover{
+    background-color: blue;
+  }
+  /* -------------------------------------------------------------------------------------------- */
+  
+  .inpmat{
+    height: 0.8cm;
+    width: 4cm; 
+    margin-left: 1.35cm;
+    background: none;
+    color: black;
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid black;
+  }
+  
+  /* -------------------------------------------------------------------------------------------- */
+  .supprimer {
+    color: red; /* Rouge pour les transactions de suppression */
+    font-weight: bolder;
+  }
+  
+  .modifie {
+    color: blue; /* Bleu pour les transactions modifiées */
+    font-weight: bolder;
+  }
+  
+  .entree {
+    color: green; /* Vert pour les entrées */
+    font-weight: bolder;
+  }
+  
+  .sortie {
+    color: orange; /* Orange pour les sorties */
+    font-weight: bolder;
+  }
+  .cassé {
+    color: grey; /* Orange pour les sorties */
+    font-weight: bolder;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    text-align: center;
+    table-layout: auto;
+  }
+  
+  #myTable:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  thead th {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 0;
+    border-radius: 5px;
+  }
+  
+  
+  tbody tr:nth-child(odd) {
+    background-color: #fafafa; 
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #e9ecef;
+  }
+  
+  tbody tr {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    height: 0.8cm;
+  }
+  
+  tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  button {
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .buton1 {
+    color: #007bff; 
+    margin-right: 0.15cm;
+  }
+  
+  .buton2 {
+    color: #dc3545; 
+    margin-left: 0.15cm;
+  }
+  
+  button:hover {
+    transform: scale(1.05); 
+  }
+  
+  /* En-têtes collants */
+  thead th {
+    position: sticky;
+    top: 0;
+    background-color: green;
+  }
+  
+  /* -------------------------------------------------------------------------------------------- */
+  .stat1{
+    position: absolute;
+    background-color: white;
+    height: 6.7cm;
+    width: 45%;
+    margin-top: 1.5cm;
+    border-radius: 10px;
+    margin-left: 0.2cm;
+    box-shadow: 0 10px 20px black;
+  }
+  
+  .stat1 label {
+    position: absolute;
+    font-size: 20px;
+    font-weight: bolder;
+    padding-right: 1cm;
+    margin-left: 14cm;
+  }
+  
+  .stat2{
+    position: absolute;
+    background-color: white;
+    height: 6.7cm;
+    width: 45%;
+    margin-top: 8.5cm;
+    border-radius: 10px;
+    margin-left: 0.2cm;
+    box-shadow: 0 10px 20px black;
+  }
+  .stat2 label {
+    position: absolute;
+    font-size: 20px;
+    font-weight: bolder;
+    padding-right: 1cm;
+    margin-left: 14cm;
+  }
+  
+  .stat3{
+    position: absolute;
+    background-color: white;
+    height: 13.7cm;
+    width: 25.2%;
+    margin-top: 1.5cm;
+    border-radius: 10px;
+    margin-left: 47.15%;
+    box-shadow: 0 10px 20px black;
+  }
+  .stat3 label {
+    text-align: center;
+    font-weight: bolder;
+    margin-left: 0.6cm;
+    font-family: Arial;
+  }
+  
+  
+  .stat4{
+    position: absolute;
+    background-color: white;
+    height: 13.7cm;
+    width: 25.2%;
+    margin-top: 1.5cm;
+    border-radius: 10px;
+    margin-left: 74%;
+    box-shadow: 0 10px 20px black;
+  }
+  .stat4 label {
+    text-align: center;
+    font-weight: bolder;
+    margin-left: 0.6cm;
+    font-family: Arial;
+  }
+  
+  /* -------------------------------------------------------------------------------------------- */
+  .chercher{
+    margin-top: 0.5cm;
+    height: 0.8cm;
+    width: 6cm; 
+    margin-left: 12.5cm;
+    background: none;
+    color: black;
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid black;
+    position: absolute;
+  }
+  
+  /* -------------------------------------------------------------------------------------------- */
+  
+  .misylistemat{
+    background: none;
+    overflow-y: auto; 
+    overflow-x: auto; 
+    max-height:350px;
+    position: relative;
+    height: 100%;
+  }
+  .misylistetrans{
+    background: none;
+    overflow-y: auto; 
+    overflow-x: auto; 
+    position: relative;
+    height: 100%;
+    max-height:350px;
+    
+    @media (max-width: 768px) {
+      .soratra {
+        font-size: 5vw; /* Adapter la taille du texte */
+      }
+      .a1, .a2, .a3, .a4 {
+        width: 1vw; /* Augmenter la taille des boutons pour petits écrans */
+        font-size: 0.5vw;
+      }
+    }
+  }
+  

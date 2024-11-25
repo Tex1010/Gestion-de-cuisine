@@ -1,0 +1,29 @@
+<div class="container" id="container">
+  <div class="welcome">
+    <div class="floating-icon icon-3"></div>
+      <h2>Bienvenue</h2>
+      <p> SUR <br>LA GESTION DE STOCK.</p>
+      <button class="btn" id="showLogin">Commencer</button>
+  </div>
+  <div class="login-form">
+      <button class="back-btn" id="backBtn">←</button>
+      <h2>Connexion</h2>
+      <form>
+          <div class="input-group">
+              <input type="text" [(ngModel)]="nom" name="username" id="username" required>
+              <label for="username">Nom d'utilisateur</label>
+          </div>
+          <div class="input-group">
+              <input type="password" [(ngModel)]="password" name="password" id="password" required>
+              <label for="password">Mot de passe</label>
+          </div>
+          <div class="checkbox-group">
+              <input type="checkbox" id="show-password">
+              <label for="show-password" style="cursor: pointer;">Afficher le mot de passe</label>
+          </div>
+          <button type="submit" class="btn" (click)="ok()">Se connecter</button>
+      </form>
+      <div class="floating-icon icon-1">🔒</div>
+      <div class="floating-icon icon-2">🔑</div>
+  </div>
+</div>
