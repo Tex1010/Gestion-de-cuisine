@@ -20,7 +20,7 @@ RUN npm run build --prod
 FROM nginx:1.23.0
 
 # Copie les fichiers build dans le dossier NGINX
-COPY --from=build /app/dist/mon-projet-angular /usr/share/nginx/html
+COPY --from=build /app/dist/gestion-de-cuisine /usr/share/nginx/html
 
 # Expose le port 80
 EXPOSE 80
